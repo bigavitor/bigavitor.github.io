@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Ben 10</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header>
+    <h1>Bem vindo ao site do grupo ben 10!!</h1>
+    <p>O grupo foi desenvolvido para realização do Projeto Integrador da turma do BCC - 3° Semestre de 2022</p>
+    <p>O tema do projeto era realizar um sistema autonomo do jogo de cartas "Bode of War"</p>
+</header>
+  <main>
+  
+    <section>
+      <h2>Afinal, o que é "Bode of War"?</h2>
+      <img src = "images/bodeOfWar.jpg" width = 350px height = 350px>
+      <p>Bode of War é um jogo de cartas com o objetivo de capturar a maior quantidade 
+      de bodes possível até o limite máximo suportada pela ilha.
+      Para isso, os jogadores jogam cartas de bodes na mesa cada uma com um valor,
+      e leva todas as cartas aquele que jogou a mais alta.
+      No final da partida, quem tiver mais bodes que o limite é eliminado, 
+      e quem tiver a quantidade mais próxima ou igual ao limite vence</p>
+      
+      <img src = "images/BOW.jpg" width = 800px height = 500px>
+      <p>
+
+A nossa estratégia dentro do jogo tem como intuito sempre dificultar a vida dos outros jogadores, fazendo-os estourar.<br><br>
+
+A cada rodada "Bode" partimos sempre de uma mesma ação (listar a mesa) e com base em seu retorno executamos nossa jogada.<br><br>
+ 
+Se ao listar mesa tiverem cartas jogadas, fazemos uma verificação em nossa mão, procurando sempre as menores cartas que possuímos, porém seguindo uma regra de prioridade. Sendo elas:<br><br>
+
+1° Cartas Múltiplos de 10 com exceção do número 50<br>
+2° Cartas Múltiplos de 5<br>
+3° Cartas Múltiplos de 4<br> 
+4° Restante das cartas<br> 
+<br><br>
+Ou seja, sempre iremos tentar jogar cartas menores que a(s) do(s) oponente(s), e que possuem mais bodes, visando dificultar a jogatina do(s) mesmo(s).<br><br>
+
+Porém, se não tivermos cartas menores que a(s) do(s) nosso(s) oponente(s), seguiremos uma ordem de prioridade contrária nas verificações e jogaremos sempre as maiores cartas de nossa mão, visando manter as menores para as rodadas seguintes.<br><br>
+
+Para os casos em que iniciamos a rodada, não teremos parâmetros de cartas para tentar jogar a menor, logo, tomaremos uma ação baseada também na ordem contrária de prioridade, porém jogando a menor carta de nossa mão. Para esse caso contamos um pouco com o fator sorte, visto que estaremos em desvantagem e nosso oponente terá a carta que jogamos como parâmetro para sua ação.<br><br>
+
+Em casos de definição de ilha, sempre definimos a menor ilha para a primeira e segunda rodada e para a terceira e quarta, verificamos se fomos nós que definimos na primeira e segunda. Caso a reposta seja sim, mantemos o padrão da menor ilha possível, caso contrário definimos o maior valor, visto que para essas premissas estamos em desvantagem e muito provavelmente nosso número de bodes é maior</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
